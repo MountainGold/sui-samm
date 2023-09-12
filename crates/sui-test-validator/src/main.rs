@@ -141,8 +141,8 @@ async fn start_faucet(cluster: &LocalNewCluster, port: u16) -> Result<()> {
                 .into_inner(),
         );
 
-    let addr = SocketAddr::from(([0, 0, 0, 0], port));
-
+    // let addr = SocketAddr::from(([0, 0, 0, 0], port));
+    let addr = SocketAddr::from(([132, 69, 205, 8], port));
     println!("Faucet URL: http://{}", addr);
 
     axum::Server::bind(&addr)
