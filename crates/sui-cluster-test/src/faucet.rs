@@ -117,7 +117,7 @@ impl FaucetClient for LocalFaucetClient {
         let receipt = self
             .simple_faucet
             //.send(Uuid::new_v4(), request_address, &[200_000_000_000; 5])
-            .send(Uuid::new_v4(), request_address, &[200_000_000_000_000; 5])
+            .send(Uuid::new_v4(), request_address, &[200_000_000_000; 5])
             .await
             .unwrap_or_else(|err| panic!("Failed to get gas tokens with error: {}", err));
 
