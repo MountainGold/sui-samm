@@ -140,7 +140,7 @@ impl Default for SuiClientBuilder {
     fn default() -> Self {
         Self {
             request_timeout: Duration::from_secs(60),
-            max_concurrent_requests: 256,
+            max_concurrent_requests: 500_000,
             ws_url: None,
         }
     }
